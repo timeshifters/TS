@@ -1,6 +1,6 @@
 //// Main site configuration. ////
 const configuration = {
-  SiteName: 'VICTOR',
+  SiteName: 'Time Shifters',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
   SiteNameSize: 0.7, // Between 0 and +
   NumberOfVerticalLines: 25,
@@ -89,7 +89,7 @@ function animate (time) {
 
 function render (time) {
   time = time / 1000
-  
+
   if (mainLettersMesh) mainLettersMesh.material.uniforms.time.value = time
   // Move geometries left and right.
   mainGeomertries.forEach((geometry, index) => {
@@ -144,15 +144,15 @@ function loadMainLetters () {
     scene.add(mainLettersMesh)
 
     let vertices = []
-  
+
     for (let i = 0; i < configuration.NumberOfDots; i ++) {
       let x = Math.random() * 200 - 100
       let y = Math.random() * 200 - 100
       let z = Math.random() * 200 - 100
-    
+
       vertices.push(x, y, z)
     }
-    
+
     const bufferGeometry = new THREE.BufferGeometry()
     bufferGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3))
     const pointSprite = new THREE.TextureLoader().load('resources/images/icons/pointImg.png')

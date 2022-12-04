@@ -65,7 +65,7 @@ li {
 li::before {
   content: "•";
   color: var(--primaryColor);
-  display: inline-block; 
+  display: inline-block;
   width: 15px;
   margin-left: -1em;
 }
@@ -372,7 +372,7 @@ iframe {
   cursor: pointer;
   transition: 300ms;
   /* Set !important on opacity because it has the same data attribute
-  as content sections (check index.html). Because of that, it will 
+  as content sections (check index.html). Because of that, it will
   hide when switching to next section (check ui.js) */
   opacity: 1 !important;
 }
