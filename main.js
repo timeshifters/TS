@@ -2,7 +2,7 @@
 const configuration = {
   SiteName: 'Time Shifters',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: 0.7, // Between 0 and +
+  SiteNameSize: 0.65, // Between 0 and +
   NumberOfVerticalLines: 25,
   NumberOfDots: 5000,
   colors: {

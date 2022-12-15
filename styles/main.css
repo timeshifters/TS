@@ -339,7 +339,7 @@ iframe {
 .fixed-content-header__logo {
   color: var(--secondaryColor);
   font: 900 35px Roboto, sans-serif;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   user-select: none;
   margin-left: 30px;
 }

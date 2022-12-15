@@ -16,7 +16,9 @@
     <main class="ui-wrapper page-not-loaded">
       <!-- LOADER -->
       <div class="loader flex flex--center">
-        <span class="loader__text">Time<br/>Shifters</span>
+        <span class="loader__text">
+          <img src="resources/images/persons/TS_logo.jpg">
+        </span>
       </div>
       <!-- MAIN MENU -->
       <div class="menu">
@@ -24,14 +26,14 @@
           <li class="menu-list__item" data-page="1">ABOUT US</li>
           <li class="menu-list__item" data-page="2">WHAT WE OFFER</li>
           <li class="menu-list__item" data-page="3">MEET THE TEAM</li>
-          <li class="menu-list__item" data-page="4">PORTFOLIO</li>
+          <li class="menu-list__item" data-page="4">Premium Digital Passes</li>
           <li class="menu-list__item" data-page="5">CONTACT US</li>
         </ul>
       </div>
       <!-- VIDEO POPUP -->
       <div class="popup" data-popup="video">
         <div class="popup__inner video__inner">
-          <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/cylSe6Mep4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <!-- If you have Youtube video or any external video, use iframe above. Otherwise use video element below; -->
           <!-- <video id="video" src="./path-to-video"></video> -->
         </div>
@@ -109,28 +111,28 @@
             </div>
             <div class="slider__inner" id="slider">
               <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person1.jpg" alt="Team photo" />
+                <img class="slider__item-image" src="./resources/images/persons/person1.png" alt="Team photo" />
                 <div class="slider__item-content">
                   <h2 class="slider__item-name">John Johnson</h2>
                   <h2 class="slider__item-position">CEO</h2>
                 </div>
               </div>
               <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person2.jpg" alt="Team photo" />
+                <img class="slider__item-image" src="./resources/images/persons/image2.png" alt="Team photo" />
                 <div class="slider__item-content">
                   <h2 class="slider__item-name">Ann Harling</h2>
                   <h2 class="slider__item-position">CTO</h2>
                 </div>
               </div>
               <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person3.jpg" alt="Team photo" />
+                <img class="slider__item-image" src="./resources/images/persons/image3.png" alt="Team photo" />
                 <div class="slider__item-content">
                   <h2 class="slider__item-name">Margarit Pitersen</h2>
                   <h2 class="slider__item-position">HR</h2>
                 </div>
               </div>
               <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person4.jpg" alt="Team photo" />
+                <img class="slider__item-image" src="./resources/images/persons/Image4.png" alt="Team photo" />
                 <div class="slider__item-content">
                   <h2 class="slider__item-name">Harold Smith</h2>
                   <h2 class="slider__item-position">MARKETING</h2>
@@ -165,7 +167,11 @@
           </div>
           <div class="fixed-content-header__logo">Time Shifters</div>
         </div>
-        <button class="fixed-content-header__contact button button--primary" data-follow data-page="5">CONTACT</button>
+        <button class="fixed-content-header__contact button button--primary">
+          <a href="https://cnft.io" style="color: white">
+                MINT
+          </a>
+        </button>
       </header>
       <!-- PAGING -->
       <div class="fixed-content-paging">
@@ -216,7 +222,7 @@
             We are <span class="emphasize">Time Shifters</span></p>
           <button class="content-section__button button button--icon" id="button_video">
             <img class="button__image" src="./resources/images/icons/play.svg" alt="Play icon"/>
-            <span class="button__text">WATCH VIDEO</span>
+            <span class="button__text">OUR SOFTWARE</span>
           </button>
         </div>
         <div class="content-section section--hidden" data-page="2">
@@ -288,24 +294,24 @@
           </div>
         </div>
         <div class="content-section section--hidden" data-page="4">
-          <h1 class="content-section__title">PORTFOLIO</h1>
-          <p class="content-section__text">We are proud of our work. With over 200 happy customers we are eager to show you the art that we produce. Check out our portfolio below.</p>
+          <h1 class="content-section__title">Premium Digital Passes</h1>
+          <p class="content-section__text">We are happy to introduce you our Digital Passes. Having those will give you an access to various assets like closed groups and even royality share.</p>
           <div class="content-portfolio__images flex">
             <div class="content-portfolio__image-holder">
-              <span class="content-portfolio__name text-indent">Mobile Design</span>
-              <img class="content-portfolio__image" src="./resources/images/portfolio/portfolio1.jpg" alt="Portfolio image" />
+              <span class="content-portfolio__name text-indent">Golden Pass</span>
+              <img class="content-portfolio__image" src="./resources/images/portfolio/GoldenPass.gif" alt="Portfolio image" />
             </div>
             <div class="content-portfolio__image-holder">
-              <span class="content-portfolio__name text-indent">Web Design</span>
-              <img class="content-portfolio__image" src="./resources/images/portfolio/portfolio2.jpg" alt="Portfolio image" />
+              <span class="content-portfolio__name text-indent">Emerald Pass</span>
+              <img class="content-portfolio__image" src="./resources/images/portfolio/EmeraldPass.gif" alt="Portfolio image" />
             </div>
             <div class="content-portfolio__image-holder">
-              <span class="content-portfolio__name text-indent">Advanced Animations</span>
-              <img class="content-portfolio__image" src="./resources/images/portfolio/portfolio3.jpg" alt="Portfolio image" />
+              <span class="content-portfolio__name text-indent">Diamond Pass</span>
+              <img class="content-portfolio__image" src="./resources/images/portfolio/DiamondPass.gif" alt="Portfolio image" />
             </div>
           </div>
-          <a class="content-section__button button button--icon" href="https://github.com/" rel="noopener">
-            <span class="button__text">VIEW PORTFOLIO</span>
+          <a class="content-section__button button button--icon" href="https://cnft.io" rel="noopener">
+            <span class="button__text">Our Collection</span>
             <img class="button__image" src="./resources/images/icons/external.svg" alt="External icon"/>
           </a>
         </div>
