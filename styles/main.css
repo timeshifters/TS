@@ -774,8 +774,8 @@ iframe {
 }
 
 .content-portfolio__image-holder {
-  width: 170px;
-  height: 400px;
+  width: 150px;
+  height: 300px;
   margin-right: 120px;
   overflow: hidden;
   display: flex;
