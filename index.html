@@ -10,6 +10,7 @@
 		<link type="text/css" rel="stylesheet" href="./styles/slider.css"/>
 		<link type="text/css" rel="stylesheet" href="./styles/components.css"/>
     <link rel="icon" type="image/png" href="./resources/images/favicon.ico"/>
+    <script src="./openPayment.js"></script>
 	</head>
 	<body>
     <!-- MAIN UI ELEMENTS -->
@@ -23,80 +24,11 @@
       <!-- MAIN MENU -->
       <div class="menu">
         <ul class="menu-list">
-          <li class="menu-list__item" data-page="1">ABOUT US</li>
-          <li class="menu-list__item" data-page="2">WHAT WE OFFER</li>
-          <li class="menu-list__item" data-page="3">MEET THE TEAM</li>
-          <li class="menu-list__item" data-page="4">Premium Digital Passes</li>
-          <li class="menu-list__item" data-page="5">CONTACT US</li>
+          <li class="menu-list__item" data-page="1">Premium Digital Passes</li>
+
         </ul>
       </div>
-      <!-- VIDEO POPUP -->
-      <div class="popup" data-popup="video">
-        <div class="popup__inner video__inner">
-          <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/cylSe6Mep4k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!-- If you have Youtube video or any external video, use iframe above. Otherwise use video element below; -->
-          <!-- <video id="video" src="./path-to-video"></video> -->
-        </div>
-      </div>
-      <!-- TEAM POPUP -->
-      <div class="popup" data-popup="team">
-        <div class="popup__inner">
-          <h2 class="popup__title">PEOPLE BEHIND THIS</h2>
-          <h3 class="popup__subtitle">Good company does not exist without good people</h3>
-          <div class="slider">
-            <div class="slider__arrow slider__arrow-left slider__arrow--disabled" data-follow="centered_y">
-              <img class="slider__arrow-icon" src="./resources/images/icons/arrow.svg" alt="Arrow icon" />
-            </div>
-            <div class="slider__arrow slider__arrow-right" data-follow="centered_y">
-              <img class="slider__arrow-icon" src="./resources/images/icons/arrow.svg" alt="Arrow icon" />
-            </div>
-            <div class="slider__inner" id="slider">
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person1.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Haren</h2>
-                  <h2 class="slider__item-position">Owner</h2>
-                </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/image2.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Mifich</h2>
-                  <h2 class="slider__item-position">Software Engeneer</h2>
-                </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/image3.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Stalid</h2>
-                  <h2 class="slider__item-position">HR</h2>
-                </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/Image4.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Garold</h2>
-                  <h2 class="slider__item-position">MARKETING</h2>
-                </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person5.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Kumar</h2>
-                  <h2 class="slider__item-position">PRODUCT</h2>
-                </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__item-image" src="./resources/images/persons/person6.png" alt="Team photo" />
-                <div class="slider__item-content">
-                  <h2 class="slider__item-name">Jenifer Lopes</h2>
-                  <h2 class="slider__item-position">Just here</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+         
       <!-- ALL FIXED CONTENT (EG. HEADER, FOOTER) -->
       <!-- HEADER -->
       <header class="fixed-content-header">
@@ -109,7 +41,7 @@
           <div class="fixed-content-header__logo">Time Shifters</div>
         </div>
         <button class="fixed-content-header__contact button button--primary">
-          <a href="https://cnft.io" style="color: white">
+          <a data-follow data-page="1" style="color: white">
                 MINT
           </a>
         </button>
@@ -118,10 +50,6 @@
       <div class="fixed-content-paging">
         <div class="paging__page" data-page="0"></div>
         <div class="paging__page section--hidden" data-page="1"></div>
-        <div class="paging__page section--hidden" data-page="2"></div>
-        <div class="paging__page section--hidden" data-page="3"></div>
-        <div class="paging__page section--hidden" data-page="4"></div>
-        <div class="paging__page section--hidden" data-page="5"></div>
       </div>
       <!-- FOOTER -->
       <div class="fixed-content-footer">
@@ -153,81 +81,8 @@
             <span class="scroll-letters__letter" title="L">L</span>
           </div>
         </div>
+        
         <div class="content-section section--hidden" data-page="1">
-          <h1 class="content-section__title">ABOUT US</h1>
-          <p class="content-section__text">''Time Shifters'' powered by Heuristic Labs<br/><br/>
-            Heuristic Labs is a company based in Baltic States which focuses on bringing the simulation of human intelligence processes by machines, especially computer systems into #NFT space.<br/><br/>
-            We're glad to announce our first CNFT project ''Time Shifters''. A unique generative art collection with the utility never seen in NFT space!<br/><br/>
-            We provide a completely functional AI generator software that doesn't require any coding; all you have to do is submit a text prompt, and the app's AI will turn your words into masterpieces.
-            Our app focuses on the ability to generate AI art using an initial image & allowing the AI model to have a base for the creation! You'll be able to stake ''Time Shifters" NFTs to generate tokens which will allow you to use software to generate your own art. Create a breathtaking and stunning images which you can use for your own NFT projects.
-            We are <span class="emphasize">Time Shifters</span></p>
-          <button class="content-section__button button button--icon" id="button_video">
-            <img class="button__image" src="./resources/images/icons/play.svg" alt="Play icon"/>
-            <span class="button__text">OUR SOFTWARE</span>
-          </button>
-        </div>
-        <div class="content-section section--hidden" data-page="2">
-          <h1 class="content-section__title">ROADMAP</h1>
-          <p class="content-section__text">Our roadmap features what we have already done by several months and also what our aim for the future is.</p>
-          <div class="content-services">
-            <div class="content-services__service">
-              <span class="content-service__text">Stage 1</span>
-              <ul class="extended-services">
-                <li class="extended-services__service">Twitter and Discord Launch</li>
-                <li class="extended-services__service">Elder Time Shifters</li>
-                <li class="extended-services__service">WL raffles with other CNFT projects</li>
-                <li class="extended-services__service">Сommunity exposure</li>
-                <li class="extended-services__service">Roadmap announcement</li>
-                <li class="extended-services__service">Sneak peaks</li>
-              </ul>
-            </div>
-            <div class="content-services__service">
-              <span class="content-service__text">Stage 2</span>
-              <ul class="extended-services">
-                <li class="extended-services__service">Lite paper & website development</li>
-                <li class="extended-services__service">Premium Digital Pass announcement</li>
-                <li class="extended-services__service">Premium Digital Pass mint</li>
-                <li class="extended-services__service">Exclusive membership club</li>
-                <li class="extended-services__service">WL mint</li>
-                <li class="extended-services__service">Public mint</li>
-                <li class="extended-services__service">jpg.store & cnft.tools verification</li>
-                <li class="extended-services__service">Team expansion</li>
-              </ul>
-            </div>
-            <div class="content-services__service">
-              <span class="content-service__text">Stage 3</span>
-              <ul class="extended-services">
-                <li class="extended-services__service">Staking</li>
-                <li class="extended-services__service">Software implemention into website</li>
-                <li class="extended-services__service">Announcement of Time Shifters token</li>
-                <li class="extended-services__service">Tokenomics of $TIME</li>
-                <li class="extended-services__service">Exclusive air-drop for pass holders</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="content-section section--hidden content-section--left-align" data-page="3">
-          <div class="content-holder--left-align">
-            <h1 class="content-section__title">MEET THE TEAM</h1>
-            <p class="content-section__text text-indent content-section__text-team">Companies can't survive without smart people running them. We have some of the most highly passionate individuals with a vision for your success. Not all heroes wear capes. Check out the people of tomorrow today.</p>
-            <button class="content-section__button button button--secondary" id="button_team">VIEW TEAM</button>
-          </div>
-          <div class="content-section__images">
-            <div class="content-section__image-holder">
-              <img class="content-section__image" src="./resources/images/persons/person1.png" alt="Team photo" />
-            </div>
-            <div class="content-section__image-holder">
-              <img class="content-section__image" src="./resources/images/persons/image2.png" alt="Team photo" />
-            </div>
-            <div class="content-section__image-holder">
-              <img class="content-section__image" src="./resources/images/persons/image3.png" alt="Team photo" />
-            </div>
-            <div class="content-section__image-holder">
-              <img class="content-section__image" src="./resources/images/persons/image4.png" alt="Team photo" />
-            </div>
-          </div>
-        </div>
-        <div class="content-section section--hidden" data-page="4">
           <h1 class="content-section__title">Premium Digital Passes</h1>
           <p class="content-section__text">We are happy to introduce you our Digital Passes. Having those will give you an access to various assets like closed groups and even royality share.</p>
           <div class="content-portfolio__images flex">
@@ -244,26 +99,9 @@
               <img class="content-portfolio__image" src="./resources/images/portfolio/DiamondPass.gif" alt="Portfolio image" />
             </div>
           </div>
-          <a class="content-section__button button button--icon" href="https://cnft.io" rel="noopener">
-            <span class="button__text">Our Collection</span>
-            <img class="button__image" src="./resources/images/icons/external.svg" alt="External icon"/>
-          </a>
+          <img src="https://studio.nmkr.io/images/buttons/paybutton_2_2.svg" onclick="openPaymentWindow()">
         </div>
-        <div class="content-section section--hidden" data-page="5">
-          <h1 class="content-section__title">CONTACT US</h1>
-          <p class="content-section__text">We’re here to help and answer any question you might have. We look forward to hearing from you. You can also find us on social media below.</p>
-          <div class="content-section__buttons-holder">
-            <a class="content-section__button button button--icon" href="mailto:YOUREMAILHERE">
-              <img class="button__image" src="./resources/images/icons/email.svg" alt="Email icon"/>
-              <span class="button__text">EMAIL US</span>
-              <span class="button__invisible-email">youremail@here.com</span>
-            </a>
-            <a class="content-section__button button button--icon" href="tel:+0011223344">
-              <img class="button__image" src="./resources/images/icons/phone.svg" alt="Phone icon"/>
-              <span class="button__text">CALL US</span>
-            </a>
-          </div>
-        </div>
+        
       </div>
     </main>
 
